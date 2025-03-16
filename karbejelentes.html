@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kárbejelentő</title>
+    <script src="validate.js" defer></script> <!-- Külső JavaScript fájl betöltése -->
+</head>
+<body>
+    <h1>Kárbejelentő űrlap</h1>
+    <form id="claimForm">
+        <label>Név: <input type="text" name="name" required></label><br>
+        <label>Lakcím: <input type="text" name="address" required></label><br>
+        <label>Születési dátum: <input type="date" name="birthdate" required></label><br>
+        <label>Email: <input type="email" name="email" required></label><br>
+        <label>Kötvényszám: <input type="number" name="policyNumber" required></label><br>
+        
+        <h3>Biztosítási esemény adatai</h3>
+        <label>Dátum: <input type="date" name="eventDate" required></label><br>
+        <label>Helyszín: <input type="text" name="eventLocation" required></label><br>
+        <label>Rövid leírás:<br><textarea name="eventDescription" required></textarea></label><br>
+        <label>Érintett vagyontárgyak: 
+            <select name="propertyType" required>
+                <option value="gépjármű">Gépjármű</option>
+                <option value="ingatlan">Ingatlan</option>
+                <option value="elektronikai eszköz">Elektronikai eszköz</option>
+                <option value="egyéb">Egyéb</option>
+            </select>
+        </label><br>
+        
+        <h3>Egyéb adatok</h3>
+        <label>Van-e más érintett? <input type="checkbox" name="otherInvolved"></label><br>
+        
+        <h3>Kifizetés módja</h3>
+        <label><input type="radio" name="paymentMethod" value="bankszamla" required> Bankszámla</label>
+        <label><input type="radio" name="paymentMethod" value="csekk" required> Csekk</label><br>
+        
+        <button type="submit">Bejelentés</button>
+    </form>
+</body>
+</html>
